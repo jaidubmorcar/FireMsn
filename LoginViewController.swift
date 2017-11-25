@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var lblMsg: UILabel!
     @IBAction func LogIn(_ sender: UIButton) {
-        
+        lblMsg.text="Estamos validando..... Espere un momento"
+        Auth.auth().signIn(withEmail: txtEmail.text!, password: txtPassword.text!) { (user, error) in
+            if error != nil{
+                self.lblMsg.text = error?.localizedDescription
+                
+            }else{
+                
+                self.performSegue(withIdentifier: "GoToChat", sender: self)
+                self.lblMsg.text = "Te damos la bienvenida."
+            }
+        }
+
     }
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
