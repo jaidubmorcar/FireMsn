@@ -29,6 +29,7 @@
                                     <color key="titleColor" red="0.95617857719999999" green="1" blue="0.95183060679999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lrk-6X-4Zc"/>
                                     <segue destination="Vrb-cp-Aae" kind="show" id="b5D-6J-T9k"/>
                                 </connections>
                             </button>
@@ -40,22 +41,23 @@
                                     <color key="titleColor" red="1" green="0.99789155149999997" blue="0.97148931709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3KR-mr-gAi" kind="show" id="CLa-VJ-LK9"/>
+                                    <action selector="btnLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPv-jz-GVR"/>
+                                    <segue destination="3KR-mr-gAi" kind="show" identifier="loginIdentificator" id="CLa-VJ-LK9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="8lx-mc-Z9R"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="jSL-rO-bBg"/>
                     <connections>
-                        <segue destination="9et-7b-f22" kind="show" identifier="GoToChat" id="O65-Gy-NZw"/>
+                        <segue destination="9et-7b-f22" kind="show" identifier="GoToChat" id="lwG-Z0-MSp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1231" y="124"/>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
         </scene>
-        <!--Login-->
+        <!--LOGIN-->
         <scene sceneID="MUy-Ea-7Wa">
             <objects>
                 <viewController id="3KR-mr-gAi" customClass="LoginViewController" customModule="FireMsn" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +77,8 @@
                                     <color key="titleColor" red="1" green="0.99789155149999997" blue="0.97148931709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="LogIn:" destination="3KR-mr-gAi" eventType="touchUpInside" id="YQY-yP-cK5"/>
+                                    <action selector="LogIn:" destination="3KR-mr-gAi" eventType="touchUpInside" id="rWn-Am-0gv"/>
+                                    <segue destination="9et-7b-f22" kind="show" id="3cr-sV-efi"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XGe-wu-tH1">
@@ -116,18 +119,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="XAu-ce-UAK"/>
+                    <navigationItem key="navigationItem" title="LOGIN" id="mM9-em-I8F"/>
                     <connections>
-                        <outlet property="txtEmail" destination="XGe-wu-tH1" id="UYO-TS-A0S"/>
-                        <outlet property="txtPassword" destination="DBM-y1-kGc" id="OfL-el-min"/>
-                        <segue destination="9et-7b-f22" kind="show" identifier="GoToChat" id="7jz-g1-cg5"/>
+                        <outlet property="txtEmail" destination="XGe-wu-tH1" id="qrC-mt-p3W"/>
+                        <outlet property="txtPassword" destination="DBM-y1-kGc" id="qSz-tv-htX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3N-CI-ShX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2292" y="-385"/>
+            <point key="canvasLocation" x="2070" y="-268"/>
         </scene>
-        <!--Register-->
+        <!--REGISTER-->
         <scene sceneID="61d-nM-rS1">
             <objects>
                 <viewController id="Vrb-cp-Aae" customClass="RegisterViewController" customModule="FireMsn" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,7 +149,7 @@
                                     <color key="titleColor" red="1" green="0.99789155149999997" blue="0.97148931709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnRegister:" destination="Vrb-cp-Aae" eventType="touchUpInside" id="Py7-W8-xFs"/>
+                                    <action selector="btnRegister:" destination="Vrb-cp-Aae" eventType="touchUpInside" id="eH9-Wg-y8H"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="db3-9W-KNr">
@@ -185,8 +187,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhH-2i-qnW">
-                                <rect key="frame" x="38" y="579" width="321" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRP-TW-PsE">
+                                <rect key="frame" x="16" y="569" width="359" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -195,17 +197,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Register" id="R8V-nc-VB1"/>
+                    <navigationItem key="navigationItem" title="REGISTER" id="cnz-kc-ACN"/>
                     <connections>
-                        <outlet property="lblMsg" destination="uhH-2i-qnW" id="4yo-4h-SGR"/>
-                        <outlet property="txtEmail" destination="db3-9W-KNr" id="tci-ud-KL7"/>
-                        <outlet property="txtPassword" destination="iR9-ho-Xjl" id="JBt-vH-WSA"/>
-                        <segue destination="9et-7b-f22" kind="show" identifier="GoToChat" id="bHy-fQ-rQk"/>
+                        <outlet property="lblMsg" destination="TRP-TW-PsE" id="ntz-8f-uQ8"/>
+                        <outlet property="txtEmail" destination="db3-9W-KNr" id="dMv-iY-bfO"/>
+                        <outlet property="txtPassword" destination="iR9-ho-Xjl" id="Gmy-dz-2Ka"/>
+                        <segue destination="9et-7b-f22" kind="show" id="lJx-zW-VJY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3h-By-UAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2168.8000000000002" y="669.71514242878561"/>
+            <point key="canvasLocation" x="2092" y="606.74662668665667"/>
         </scene>
         <!--Fire Chat-->
         <scene sceneID="HvN-Ye-UbT">
@@ -229,8 +231,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Fire Chat" id="pAu-ww-QLd">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Ese-gJ-AxC"/>
+                    <navigationItem key="navigationItem" title="Fire Chat" id="d3F-PB-G5h">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="aiS-ex-Vcb"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNh-aH-MaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -257,6 +259,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bHy-fQ-rQk"/>
+        <segue reference="lJx-zW-VJY"/>
     </inferredMetricsTieBreakers>
 </document>
