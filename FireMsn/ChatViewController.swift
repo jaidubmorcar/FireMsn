@@ -10,9 +10,10 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
+    @IBOutlet weak var layerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //layerView.layer.borderColor=UIColor.init(alpha: 1.0).cgColor
         // Do any additional setup after loading the view.
     }
 

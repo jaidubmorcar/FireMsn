@@ -264,6 +264,9 @@
                     <navigationItem key="navigationItem" title="Fire Chat" id="pAu-ww-QLd">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Ese-gJ-AxC"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="layerView" destination="Saj-y9-FbJ" id="Se1-4H-Efb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNh-aH-MaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
