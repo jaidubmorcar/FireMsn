@@ -262,10 +262,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Fire Chat" id="pAu-ww-QLd">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Ese-gJ-AxC"/>
+                        <barButtonItem key="rightBarButtonItem" title="SingOut" id="MUu-gB-W0a">
+                            <connections>
+                                <action selector="singOut:" destination="9et-7b-f22" id="85g-oC-VOi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="layerView" destination="Saj-y9-FbJ" id="Se1-4H-Efb"/>
+                        <outlet property="tableView" destination="yHC-VS-AF2" id="fKs-CO-QCw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNh-aH-MaE" userLabel="First Responder" sceneMemberID="firstResponder"/>
